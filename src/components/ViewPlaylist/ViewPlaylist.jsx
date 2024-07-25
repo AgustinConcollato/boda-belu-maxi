@@ -1,4 +1,4 @@
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons"
+import { faAngleLeft, faCircle } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "react-router-dom"
 import imgPlaylist from '../../assets/img/img3.jpeg'
@@ -16,10 +16,11 @@ export const ViewPlaylist = () => {
     const { resetValues } = useContext(PlaylistContext)
 
     const [playlist, setPlaylist] = useState([])
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
 
-        async function obtenerDatos() {
+        async function getPlaylist() {
             const querySnapshot = await getDocs(collection(db, 'playlist'))
             const songs = []
             querySnapshot.forEach((doc) => {
@@ -28,8 +29,9 @@ export const ViewPlaylist = () => {
             return songs
         }
 
-        obtenerDatos().then((songs) => {
+        getPlaylist().then((songs) => {
             setPlaylist(songs)
+            setLoading(true)
         }).catch((error) => {
             console.error('Error al obtener datos:', error)
         })
@@ -52,14 +54,19 @@ export const ViewPlaylist = () => {
                     </div>
                 </div>
             </header>
-            {playlist.length !== 0
+            {loading
                 ? <ul className="playlist-oficial">
-                    {playlist.map((e, i) => <Song key={i} e={e} add={false} />)}
+                    {playlist.length !== 0
+                        ? playlist.map((e, i) => <Song key={i} e={e} add={false} />)
+                        : <div className="playlist-empty">
+                            <p>Todavía no hay canciones</p>
+                            <BtnAddSongs />
+                        </div>
+                    }
                 </ul>
-                : <div className="playlist-empty">
-                    <p>Todavía no hay canciones</p>
-                    <BtnAddSongs />
-                </div>
+                : <ul>
+                    <span className="loading"><FontAwesomeIcon icon={faCircle} /></span>
+                </ul>
             }
         </section>
     )

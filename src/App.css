@@ -1,0 +1,245 @@
+@font-face {
+  font-family: 'Bugaki';
+  src: url(./assets/fonts/Bugaki-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Katibeh';
+  src: url(./assets/fonts/Katibeh-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Parisienne';
+  src: url(./assets/fonts/Parisienne-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Mohave';
+  src: url(./assets/fonts/Mohave-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: 'Natalie';
+  src: url(./assets/fonts/Natalie.otf);
+}
+
+:root {
+  --color-1: #FCF6F2;
+  --color-2: #FFEEEE;
+  --color-3: #ECBBC3;
+  --color-4: #CF647A;
+  --color-5: #822F49;
+  --color-6: #3D1421;
+
+  --font-1: "Bugaki";
+  --font-2: "Parisienne";
+  --font-3: "Mohave";
+  --font-4: "Natalie";
+  --font-5: "Katibeh";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color-6);
+}
+
+body {
+  background: #ffffff;
+  overflow-x: hidden;
+  opacity: 0;
+  transition: .2s;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-primary {
+  color: var(--color-4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  min-height: 38px;
+  text-transform: uppercase;
+  background: var(--color-1);
+  border: 1px solid var(--color-3);
+  border-radius: 5px;
+  margin: 30px auto;
+  font-size: 14px;
+  font-family: var(--font-1);
+  padding: 10px 15px;
+  outline: auto;
+  text-align: center;
+  transition: .3s;
+  outline: none;
+}
+
+.btn-primary:hover {
+  background: #f8ece4;
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px #00000010;
+}
+
+p {
+  font-family: var(--font-5);
+}
+
+h3 {
+  color: var(--color-5);
+  font-size: 46px;
+  line-height: 35px;
+  font-family: var(--font-5);
+  text-align: center;
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+}
+
+/*/////////////*/
+
+#root {
+  width: 100%;
+  margin: auto;
+  background: #fff;
+  overflow: hidden;
+}
+
+h4 {
+  font-weight: 300;
+  color: var(--color-5);
+  text-align: center;
+  font-family: var(--font-4);
+}
+
+.icon {
+  margin: 0 auto 15px;
+  display: block;
+}
+
+.section8 {
+  background: var(--color-1);
+  padding: 40px 0 80px 0;
+  margin-top: 120px;
+  position: relative;
+}
+
+.section8 svg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section8 h4 {
+  font-size: 45px;
+  transform: translateY(-65px);
+}
+
+.section8 h4:nth-child(2) {
+  transform: translateY(-45px);
+  font-size: 50px;
+  z-index: 100;
+  position: relative;
+}
+
+.section8 img {
+  transform: translateY(-65px);
+  width: 80%;
+  max-width: 270px;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+  position: relative;
+}
+
+footer {
+  padding: 40px;
+  background: #22222C;
+}
+
+footer div {
+  margin-top: 30px;
+}
+
+footer p {
+  color: #ccc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+footer a {
+  font-size: 17px;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: capitalize;
+  width: auto;
+  min-height: 0;
+  display: inline;
+}
+
+footer a:hover {
+  background: none;
+  text-decoration: underline;
+}
+
+.img-whatsapp {
+  transform: translateY(1.5px);
+}
+
+.loading {
+  animation: loading 1s infinite linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  width: 94px;
+}
+
+
+@keyframes loading {
+
+  0%,
+  100% {
+    transform: scale(.8);
+    opacity: .5;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .loading {
+    height: 35px;
+    width: 35px;
+  }
+
+  footer a {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 380px) {
+  h3 {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 325px) {
+
+  .section8 h4 {
+    font-size: 39px;
+  }
+}

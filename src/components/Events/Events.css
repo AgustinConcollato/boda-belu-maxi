@@ -1,0 +1,143 @@
+.section4 {
+    margin: 200px 0;
+    position: relative;
+}
+
+.section4>div {
+    max-width: 768px;
+    margin: auto;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ceremony,
+.celebration {
+    z-index: 100;
+    position: relative;
+}
+
+.section4 div p:nth-child(3) {
+    font-size: 52px;
+}
+
+.section4 div p:nth-child(4) {
+    font-size: 42px;
+}
+
+.section4 p {
+    color: var(--color-6);
+    text-align: center;
+}
+
+.section4 p span {
+    position: relative;
+    top: 10px;
+    color: var(--color-5);
+    font-size: 28px;
+    display: block;
+}
+
+.color1 {
+    height: 130%;
+    width: 200%;
+    transform: rotate(3deg);
+    position: absolute;
+    top: -57px;
+    left: -50%;
+    background: var(--color-1);
+    z-index: 10;
+    transition: .5s;
+}
+
+.color3 {
+    height: 130%;
+    width: 200%;
+    transform: rotate(-3deg);
+    position: absolute;
+    top: -57px;
+    left: -50%;
+    background: var(--color-3);
+    transition: .5s;
+}
+
+.divisor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    justify-content: center;
+    margin: 20px 0;
+    z-index: 100;
+}
+
+.divisor div {
+    height: 1px;
+    width: 60px;
+    background: var(--color-4);
+    transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+
+    .section4>div {
+        flex-direction: column;
+    }
+
+    .ceremony,
+    .celebration {
+        z-index: 100;
+        position: relative;
+    }
+
+    .section4 div p:nth-child(3) {
+        font-size: 52px;
+    }
+
+    .section4 div p:nth-child(4) {
+        font-size: 42px;
+    }
+
+    .section4 p {
+        color: var(--color-6);
+        text-align: center;
+    }
+
+    .section4 p span {
+        position: relative;
+        top: 10px;
+        color: var(--color-5);
+        font-size: 28px;
+        display: block;
+    }
+
+    .color1 {
+        height: 110%;
+        transform: rotate(10deg);
+    }
+
+    .color3 {
+        height: 110%;
+        transform: rotate(-10deg);
+    }
+
+    .divisor {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: center;
+        flex-direction: row;
+        margin: 20px 0;
+        z-index: 100;
+    }
+
+    .divisor div {
+        height: 1px;
+        width: 60px;
+        background: var(--color-4);
+        transform: rotate(0deg);
+    }
+}

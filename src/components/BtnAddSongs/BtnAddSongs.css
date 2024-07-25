@@ -1,0 +1,15 @@
+.btn-add-songs {
+    font-size: 16px;
+    font-family: var(--font-3);
+    background: none;
+    cursor: pointer;
+    border: 1px solid #3D142130;
+    padding: 6px 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn-add-songs:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px #00000010;
+}

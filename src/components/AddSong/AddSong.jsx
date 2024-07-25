@@ -8,7 +8,7 @@ export const AddSong = () => {
         <section className='section7'>
             <div>
                 {icon5}
-                <h3>No es una fiesta si no suena....</h3>
+                <h3>No es una fiesta si no suena...</h3>
                 <p>¿Qué tema no puede faltar en nuestra fiesta? ¡Ayúdanos a armar la lista!</p>
                 <Link className='btn-primary' to="/playlist" >añadir tema</Link>
             </div>

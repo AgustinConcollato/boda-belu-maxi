@@ -51,7 +51,7 @@ h1 {
     flex-direction: column;
     line-height: 50px;
     padding-top: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 h1 span {
@@ -66,13 +66,29 @@ h1 span {
     font-size: 42px;
     text-align: center;
     display: block;
-    margin: auto;
+    margin: 40px auto;
     line-height: 40px;
     max-width: 768px;
     -webkit-text-stroke: .5px var(--color-6);
     position: relative;
 }
 
+.section1 .efisios {
+    font-style: italic;
+    display: block;
+    margin: 30px auto;
+    color: var(--color-3);
+    -webkit-text-stroke: .5px var(--color-3);
+    font-size: 36px;
+}
+
+.section1 .efisios span {
+    font-size: 24px;
+    text-wrap: nowrap;
+    color: var(--color-3);
+    -webkit-text-stroke: .5px transparent;
+    display: block;
+}
 
 @media (max-width: 768px) {
 
@@ -88,6 +104,7 @@ h1 span {
         font-size: 56px;
         line-height: 34px;
         height: 140px;
+        margin-bottom: 60px;
     }
 
     h1 span {
@@ -95,7 +112,7 @@ h1 span {
     }
 
     .section1 {
-        margin: 60px 0;
+        margin: 60px 0 0;
     }
 
     .section1 p {
@@ -105,12 +122,14 @@ h1 span {
         line-height: 24px;
     }
 
+    .section1 .efisios {
+        margin: 30px;
+        font-size: 32px;
+    }
+
 }
 
 @media (max-width: 380px) {
-    .section1 {
-        margin: 60px 0;
-    }
 
     h1 {
         padding: 0 20px;
@@ -121,8 +140,6 @@ h1 span {
         font-size: 48px;
     }
 }
-
-
 
 @media (max-width: 325px) {
     h1 {

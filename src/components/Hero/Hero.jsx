@@ -17,6 +17,7 @@ export const Hero = () => {
                     <span>¡nos casamos!</span>
                     Belu y Maxi
                 </h1>
+                <p className='efisios'>"y los dos se convertirán en uno sólo" <span>Efesios 5:31</span></p>
                 <p>Queremos invitarte a compartir la alegría de unir nuestras vidas...</p>
             </section>
         </section>

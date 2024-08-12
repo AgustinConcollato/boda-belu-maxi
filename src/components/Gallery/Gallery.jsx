@@ -107,7 +107,7 @@ export const Gallery = () => {
                 currentImg={currentImg}
                 onPageChange={handlePageChange}
             />
-            <Link className='btn-primary' to={'/album/1'}>Ver album completo</Link>
+            <Link className='btn-primary' to={'/album/1'}>Ver álbum completo</Link>
         </section>
     )
 }

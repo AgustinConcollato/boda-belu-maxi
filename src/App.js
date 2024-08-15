@@ -84,7 +84,7 @@ export const App = () => {
                                     <FontAwesomeIcon icon={faInstagram} />
                                 </Link>
                             </div>
-                            <p>Hecho por <a href='https://conco-sw.netlify.app' target="_blank" rel="noopener noreferrer">Conco Soluciones Web</a></p>
+                            <p>Hecho por <a href='https://concosw.netlify.app' target="_blank" rel="noopener noreferrer">Conco Soluciones Web</a></p>
                         </footer>
                     </>
                 }

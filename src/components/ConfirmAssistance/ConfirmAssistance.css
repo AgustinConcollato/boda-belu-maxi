@@ -25,6 +25,7 @@
     font-family: var(--font-5);
     font-weight: 300;
     -webkit-text-stroke: .5px var(--color-6);
+    text-decoration: 2px underline;
 }
 
 .section5>div div p:last-child span {
@@ -34,7 +35,7 @@
 }
 
 .section5>div div p {
-    font-size: 34px;
+    font-size: 32px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

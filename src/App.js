@@ -38,11 +38,11 @@ export const App = () => {
 
     const platform = navigator.userAgentData.mobile
 
-    useEffect(() => {
-        document.fonts.ready.then(function () {
-            document.body.style.opacity = 1
-        })
-    }, [])
+    // useEffect(() => {
+    //     document.fonts.ready.then(function () {
+    //         document.body.style.opacity = 1
+    //     })
+    // }, [])
 
     return (
         <BrowserRouter>

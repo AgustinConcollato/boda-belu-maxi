@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useEffect } from 'react'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import './App.css'
 import { icon6, iconDivisor } from './assets/icons/icons'
@@ -37,12 +36,6 @@ export const db = getFirestore(app)
 export const App = () => {
 
     const platform = navigator.userAgentData.mobile
-
-    // useEffect(() => {
-    //     document.fonts.ready.then(function () {
-    //         document.body.style.opacity = 1
-    //     })
-    // }, [])
 
     return (
         <BrowserRouter>

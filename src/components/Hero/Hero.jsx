@@ -1,10 +1,11 @@
 import img5celular from '../../assets/img/img5celular.jpg'
 import img5compu from '../../assets/img/img5compu.jpg'
+import { usePlatform } from '../../hooks/usePlatform'
 import './Hero.css'
 
 export const Hero = () => {
 
-    const platform = navigator.userAgentData.mobile
+    const platform = usePlatform()
 
     return (
         <section className='section-hero'>

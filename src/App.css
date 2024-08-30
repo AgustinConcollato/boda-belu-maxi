@@ -248,7 +248,7 @@ footer div a:hover {
   }
 
   footer a {
-    text-decoration: underline;
+    text-decoration: 1px underline;
   }
 }
 

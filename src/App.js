@@ -14,6 +14,7 @@ import { Hero } from './components/Hero/Hero'
 import { Playlist } from './components/Playlist/Playlist'
 import { ViewPlaylist } from './components/ViewPlaylist/ViewPlaylist'
 import { PlaylistProvider } from './context/PlaylistContext'
+import { usePlatform } from './hooks/usePlatform'
 
 import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { initializeApp } from "firebase/app"
@@ -35,12 +36,12 @@ export const db = getFirestore(app)
 
 export const App = () => {
 
-    const platform = navigator.userAgentData.mobile
+    const platform = usePlatform()
 
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/*' element={
+                <Route path='/' element={
                     <>
                         <Hero />
                         <Date />

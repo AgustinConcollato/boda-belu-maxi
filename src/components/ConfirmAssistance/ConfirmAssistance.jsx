@@ -17,7 +17,7 @@ export const ConfirmAssistance = () => {
                     <br />
                     Fecha límite de pago: 7/10
                 </p>
-                <a className='btn-primary' href="https://docs.google.com/forms/d/e/1FAIpQLScD1T94LdbbleRdzIGrROeFRGCDsqECI1GmT9Aj0K58MN-UnA/viewform" target="_blank" rel="noopener noreferrer">confirmar asistencia</a>
+                <a className='btn-primary'>confirmar asistencia</a>
             </div>
         </section>
     )

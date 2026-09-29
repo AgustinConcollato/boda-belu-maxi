@@ -64,7 +64,7 @@ export const App = () => {
                             <img src={img6} />
                             {iconDivisor}
                         </section>
-                        <footer>
+                        {/* <footer>
                             <div>
                                 {platform
                                     ? <Link rel="noopener noreferrer" to="whatsapp://send?phone=+543492417924" data-action="share/whatsapp/share">
@@ -79,7 +79,7 @@ export const App = () => {
                                 </Link>
                             </div>
                             <p>Hecho por <a href='https://concosw.netlify.app' target="_blank" rel="noopener noreferrer">Conco Soluciones Web</a></p>
-                        </footer>
+                        </footer> */}
                     </>
                 }
                 />

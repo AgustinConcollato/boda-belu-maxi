@@ -18,6 +18,38 @@ export const ViewPlaylist = () => {
     const [playlist, setPlaylist] = useState([])
     const [loading, setLoading] = useState(false)
 
+    function addSpotify() {
+
+        const totalPart = []
+        const part1 = []
+        const part2 = []
+
+        playlist.forEach((e, i) => {
+            if (i < (playlist.length / 2)) {
+                part1.push(e.uri)
+            } else {
+                part2.push(e.uri)
+            }
+        })
+
+        totalPart.push(part1)
+        totalPart.push(part2)
+
+        // totalPart.map(e => {
+        //     fetch('https://api.spotify.com/v1/playlists/6cB2h2cAUuVBYNT8plT19R/tracks', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Authorization': `Bearer BQA7cgTjMfaaxfSO0DCONhwK39kgzX7kx3m6RO4MiPt_virgM-LBVyOkotk3Pe7fQwrk-vkA7TNDcQOSpNjqL7ODEV5wmQtJxIaEpLA4YeviSHaTPl0lPSgvquvBUfbmQEDEKj09N-4NlxY7Yvyk-B3qRP-eI267WGp4ZzB6mqel7P3BA8BcFc_fzd_kxFNzHhBwzNgO5djA21W9ddmyPHyboSSdqur_ZjO4VVA`,
+        //             'Content-Type': 'application/json'
+        //         },
+        //         body: JSON.stringify(e)
+        //     })
+        //         .then(e => e.json())
+        //         .then(e => console.log(e))
+        //         .catch(error => console.log(error))
+        // })
+    }
+
     useEffect(() => {
 
         async function getPlaylist() {
@@ -45,6 +77,7 @@ export const ViewPlaylist = () => {
                 <div>
                     <Link to={'/'}><FontAwesomeIcon icon={faAngleLeft} size="2xs" /> Invitación</Link>
                     <BtnAddSongs />
+                    <button onClick={addSpotify}>agregar a spotify</button>
                 </div>
                 <div className="info-playlist">
                     <img src={imgPlaylist} />
